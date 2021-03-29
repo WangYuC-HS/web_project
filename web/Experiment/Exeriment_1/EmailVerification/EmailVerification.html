@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱验证</title>
+    <script>
+        function check(reg){
+            var emailname=reg.emailname.value;
+            var password=reg.psw.value;
+            if(emailname==""){
+                alert("邮箱账号不能为空!")
+                reg.emailname.focus();
+                reg.emailname.select();
+                return false;
+            }
+            else if(password.length<6){
+                alert("密码不符合格式，应大于6位");
+                reg.psw.focus;
+                rsg.psw.select();
+                return false;
+            }
+            else {
+                alert("合法输入!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="reg" action="#" method="post" onsubmit="return check(this)">
+    <center>邮&nbsp; &nbsp;箱：<input type="email" name="emailname" value=""><br>
+        密&nbsp; &nbsp;码：<input type="password" name="psw" value=""><br><br>
+        电&nbsp; &nbsp;话：<input type="tel" name="phonenum" value=""><br><br>
+        <input type="submit" value="登陆"> &nbsp; &nbsp;<input type="reset" value="取消"></center><br><br>
+</form>
+</body>
+</html>
